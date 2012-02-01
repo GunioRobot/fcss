@@ -29,20 +29,20 @@
  *
  */
 
-package com.flashartofwar.fcss.enum 
+package com.flashartofwar.fcss.enum
 {
 
 	/**
 	 * @author jessefreeman
 	 */
-	public class ColorsByName 
+	public class ColorsByName
 	{
 		/**
 		 * <p>Looks up the property type and confirms that it exists.</p>
 		 *
 		 * @param property
-		 */ 
-		public static function isSupported(colorName:String):Boolean 
+		 */
+		public static function isSupported(colorName:String):Boolean
 		{
 			return (COLORS.hasOwnProperty(colorName));
 		}

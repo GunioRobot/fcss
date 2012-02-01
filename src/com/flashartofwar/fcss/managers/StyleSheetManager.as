@@ -61,12 +61,12 @@ package com.flashartofwar.fcss.managers {
 		 */
 		public static function set styleSheetCollection(collection:IStyleSheetCollection):void
 		{
-			__instance = collection;	
+			__instance = collection;
 		}
 
 		private static function createStyleSheetCollection():IStyleSheetCollection
 		{
-			return new StyleSheetCollection();	
+			return new StyleSheetCollection();
 		}
 
 		/**

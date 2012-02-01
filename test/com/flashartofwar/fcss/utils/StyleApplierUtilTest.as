@@ -2,9 +2,9 @@ package com.flashartofwar.fcss.utils
 {
 	import com.flashartofwar.fcss.objects.PropertyMapObject;
 	import com.flashartofwar.fcss.styles.Style;
-	
+
 	import flexunit.framework.Assert;
-	
+
 	public class StyleApplierUtilTest
 	{
 
@@ -15,7 +15,7 @@ package com.flashartofwar.fcss.utils
 
 		// Reference declaration for class to test
 		private var classToTestRef : com.flashartofwar.fcss.utils.StyleApplierUtil;
-		
+
 		[Test]
 		public function testApplyProperties():void
 		{
@@ -33,7 +33,7 @@ package com.flashartofwar.fcss.utils
 			Assert.assertTrue(pass);
 
 		}
-		
+
 		[Test]
 		public function testPropertyMapObject():void
 		{

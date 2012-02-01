@@ -25,13 +25,13 @@ function isEclipse() {
 function configPage() {
     setRowColorsInitial(true, "Property");
     setRowColorsInitial(true, "Method");
-    setRowColorsInitial(true, "ProtectedMethod");   
+    setRowColorsInitial(true, "ProtectedMethod");
     setRowColorsInitial(true, "Event");
     setRowColorsInitial(true, "Style");
-    
+
     setRowColorsInitial(true, "SkinPart");
     setRowColorsInitial(true, "SkinState");
-    
+
     setRowColorsInitial(true, "Constant");
     if (isEclipse()) {
         if (window.name != "classFrame")
@@ -92,7 +92,7 @@ function loadClassListFrame(classListFrameURL) {
 function gotoLiveDocs(primaryURL, secondaryURL, locale) {
         if (locale == "en-us") {
              locale = "";
-        } 
+        }
         else {
               locale = "_" + locale.substring(3);
         }
@@ -134,13 +134,13 @@ function titleBar_setSubNav(showConstants,showProperties,showStyles,showSkinPart
         findTitleTableObject("eventsBar").style.display = (showEvents && (showStyles || showSkinPart || showSkinState || showEffects || showConstants || showPackageConstants || showInterfaces || showClasses || showPackageUse || showExamples)) ? "inline" : "none";
         findTitleTableObject("stylesLink").style.display = showStyles ? "inline" : "none";
         findTitleTableObject("stylesBar").style.display = (showStyles && (showSkinPart || showSkinState || showEffects || showConstants || showPackageConstants || showInterfaces || showClasses || showPackageUse || showExamples)) ? "inline" : "none";
-        
+
         findTitleTableObject("SkinPartLink").style.display = showSkinPart ? "inline" : "none";
         findTitleTableObject("SkinPartBar").style.display = (showSkinPart && (showSkinState || showEffects || showConstants || showPackageConstants || showInterfaces || showClasses || showPackageUse || showExamples)) ? "inline" : "none";
-        
+
         findTitleTableObject("SkinStateLink").style.display = showSkinState ? "inline" : "none";
 	findTitleTableObject("SkinStateBar").style.display = (showSkinState && (showEffects || showConstants || showPackageConstants || showInterfaces || showClasses || showPackageUse || showExamples)) ? "inline" : "none";
-                
+
         findTitleTableObject("effectsLink").style.display = showEffects ? "inline" : "none";
         findTitleTableObject("effectsBar").style.display = (showEffects && (showConstants || showPackageConstants || showInterfaces || showClasses || showPackageUse || showExamples)) ? "inline" : "none";
         findTitleTableObject("constantsLink").style.display = showConstants ? "inline" : "none";
@@ -163,14 +163,14 @@ function titleBar_gotoClassFrameAnchor(anchor)
     else
         top.classFrame.location = top.classFrame.location.toString().split('#')[0] + "#" + anchor;
 }
-function setMXMLOnly() 
+function setMXMLOnly()
 {
     if (getCookie("showMXML") == "false")
     {
         toggleMXMLOnly();
     }
 }
-function toggleMXMLOnly() 
+function toggleMXMLOnly()
 {
     var mxmlDiv = findObject("mxmlSyntax");
     var mxmlShowLink = findObject("showMxmlLink");
@@ -194,7 +194,7 @@ function toggleMXMLOnly()
     }
 }
 function showHideInherited()
-{   
+{
     setInheritedVisible(getCookie("showInheritedConstant") == "true", "Constant");
     setInheritedVisible(getCookie("showInheritedProtectedConstant") == "true", "ProtectedConstant");
     setInheritedVisible(getCookie("showInheritedProperty") == "true", "Property");
@@ -203,10 +203,10 @@ function showHideInherited()
     setInheritedVisible(getCookie("showInheritedProtectedMethod") == "true", "ProtectedMethod");
     setInheritedVisible(getCookie("showInheritedEvent") == "true", "Event");
     setInheritedVisible(getCookie("showInheritedStyle") == "true", "Style");
-    
+
     setInheritedVisible(getCookie("showInheritedSkinPart") == "true", "SkinPart");
     setInheritedVisible(getCookie("showInheritedSkinState") == "true", "SkinState");
-    
+
     setInheritedVisible(getCookie("showInheritedEffect") == "true", "Effect");
 }
 function setInheritedVisible(show, selectorText)
@@ -218,7 +218,7 @@ function setInheritedVisible(show, selectorText)
         {
             if (rules[i].selectorText == ".hideInherited" + selectorText)
                 rules[i].style.display = show ? "" : "none";
-                
+
             if (rules[i].selectorText == ".showInherited" + selectorText)
                 rules[i].style.display = show ? "none" : "";
         }
@@ -244,7 +244,7 @@ function setRowColors(show, selectorText)
             {
                 rowNum++;
                 table.rows[i].bgColor = (rowNum % 2 == 0) ? rowColor : "#FFFFFF";
-            }           
+            }
         }
     }
 }
@@ -261,7 +261,7 @@ function setRowColorsInitial(show, selectorText)
             {
                 rowNum++;
                 table.rows[i].bgColor = (rowNum % 2 == 0) ? rowColor : "#FFFFFF";
-            }           
+            }
         }
     }
 }

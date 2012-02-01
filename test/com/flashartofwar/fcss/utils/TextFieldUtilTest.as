@@ -2,10 +2,10 @@ package com.flashartofwar.fcss.utils
 {
 	import com.flashartofwar.fcss.enum.CSSProperties;
 	import com.flashartofwar.fcss.styles.Style;
-	
+
 	import flash.text.TextField;
 	import flash.text.TextFormat;
-	
+
 	import flexunit.framework.Assert;
 
 	public class TextFieldUtilTest

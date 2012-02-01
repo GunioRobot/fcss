@@ -29,21 +29,21 @@
  *
  */
 
-package com.flashartofwar.fcss.enum 
+package com.flashartofwar.fcss.enum
 {
 	import com.flashartofwar.fcss.utils.TypeHelperUtil;
 
 	/**
 	 * @author jessefreeman
 	 */
-	public class TextFieldProperties 
+	public class TextFieldProperties
 	{
 		/**
 		 * <p>Looks up the property type and confirms that it exists.</p>
 		 *
 		 * @param property
-		 */ 
-		public static function isSupported(property:String):Boolean 
+		 */
+		public static function isSupported(property:String):Boolean
 		{
 			return (PROPERTY_TYPES[property]);
 		}

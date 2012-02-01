@@ -34,21 +34,21 @@ package com.flashartofwar.fcss.styles
 			Assert.assertEquals(clone.toString(), style.toString());
 
 		}
-		
+
 		[Test]
 		public function testGet_styleName():void
 		{
 			// Add your test logic here
 			Assert.assertEquals(style.styleName, style_NAME);
 		}
-		
+
 		[Test]
 		public function testSet_styleName():void
 		{
 			style.styleName = style_NAME+"Renamed";
 			Assert.assertEquals(style.styleName, style_NAME+"Renamed");
 		}
-		
+
 		[Test]
 		public function testToString():void
 		{
@@ -56,7 +56,7 @@ package com.flashartofwar.fcss.styles
 
 			Assert.assertEquals(style.toString(), styleAsString);
 		}
-		
+
 		[Test]
 		private function getPropertyArray():Array
 		{
@@ -68,7 +68,7 @@ package com.flashartofwar.fcss.styles
 			}
 			return props;
 		}
-		
+
 		[Test]
 		public function testPropertyOrder():void{
 
@@ -77,7 +77,7 @@ package com.flashartofwar.fcss.styles
 			// Add your test logic here
 			Assert.assertEquals(props.indexOf("propB"), 2);
 		}
-		
+
 		[Test]
 		public function testMergestyleName():void{
 
@@ -88,7 +88,7 @@ package com.flashartofwar.fcss.styles
 
 			Assert.assertEquals(style.styleName, style_NAME + "Merge");
 		}
-		
+
 		[Test]
 		public function testMergeNewProperty():void{
 
@@ -99,7 +99,7 @@ package com.flashartofwar.fcss.styles
 
 			Assert.assertTrue(style.hasOwnProperty("propQ"));
 		}
-		
+
 		[Test]
 		public function testMergeSameProperty():void{
 
@@ -110,13 +110,13 @@ package com.flashartofwar.fcss.styles
 
 			Assert.assertEquals(style.propA, "a2");
 		}
-		
+
 		[Test]
 		public function testAddProperty():void{
 			style.propZ = "z";
 			Assert.assertTrue( style.hasOwnProperty("propZ"));
 		}
-		
+
 		[Test]
 		public function testPropertyOrderAfterAdding():void{
 			style.propZ = "z";
@@ -126,13 +126,13 @@ package com.flashartofwar.fcss.styles
 			Assert.assertTrue(props.indexOf("propZ"), (props.length -1));
 
 		}
-		
+
 		[Test]
 		public function testDeleteProperty():void{
 			delete style.propA;
 			Assert.assertFalse( style.hasOwnProperty("propA"));
 		}
-		
+
 		[Test]
 		public function testPropertyOrderAfterDelete():void{
 			delete style.propB;

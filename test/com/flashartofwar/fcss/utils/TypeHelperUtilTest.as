@@ -1,7 +1,7 @@
 package com.flashartofwar.fcss.utils
 {
 	import flash.net.URLRequest;
-	
+
 	import flexunit.framework.Assert;
 
 	public class TypeHelperUtilTest
@@ -31,7 +31,7 @@ package com.flashartofwar.fcss.utils
 			var input:String = "true";
 			Assert.assertTrue(TypeHelperUtil.stringToBoolean(input));
 		}
-		
+
 		[Test]
 		public function testStringToNumber():void
 		{

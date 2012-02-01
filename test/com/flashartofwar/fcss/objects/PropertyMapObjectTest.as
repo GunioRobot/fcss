@@ -3,9 +3,9 @@ package com.flashartofwar.fcss.objects
 	import com.flashartofwar.fcss.objects.PropertyMapObject;
 
 	import flexunit.framework.TestCase;
-	
+
 	import flexunit.framework.Assert;
-	
+
 	public class PropertyMapObjectTest
 	{
 		// please note that all test methods should start with 'test' and should be public
@@ -33,27 +33,27 @@ package com.flashartofwar.fcss.objects
 		public function runAfterEachTest():void
 		{
 		}
-		
+
 		[Test]
 		public function testClone():void
 		{
 			var clone:PropertyMapObject = propMap.clone();
 			Assert.assertEquals(propMap.toString(), propMap.toString());
 		}
-		
+
 		[Test]
 		public function testGetPropsByTypes():void
 		{
-			Assert.assertEquals(propMap.getPropsByTypes("string", "number").length,4); 
+			Assert.assertEquals(propMap.getPropsByTypes("string", "number").length,4);
 		}
-		
+
 		[Test]
 		public function testToString():void
 		{
 			var propMapAsString:String = "{propA:string;propB:number;propC:array;}";
 			Assert.assertEquals(propMap.toString(), propMapAsString);
 		}
-		
+
 		[Test]
 		public function testGetPropsByTypesReturnsCleanArray():void
 		{

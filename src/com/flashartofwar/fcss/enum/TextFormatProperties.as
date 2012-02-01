@@ -29,14 +29,14 @@
  *
  */
 
-package com.flashartofwar.fcss.enum 
+package com.flashartofwar.fcss.enum
 {
 	import com.flashartofwar.fcss.utils.TypeHelperUtil;
 
 	/**
 	 * @author jessefreeman
 	 */
-	public class TextFormatProperties 
+	public class TextFormatProperties
 	{
 
 		/**
@@ -44,7 +44,7 @@ package com.flashartofwar.fcss.enum
 		 * @param property
 		 * @return
 		 */
-		public static function isSupported(property:String):Boolean 
+		public static function isSupported(property:String):Boolean
 		{
 			return (PROPERTY_TYPES[convertProp( property )]);
 		}
@@ -55,7 +55,7 @@ package com.flashartofwar.fcss.enum
 		 * @param value
 		 * @return
 		 */
-		public static function cleanupProp(id:String,value:String):* 
+		public static function cleanupProp(id:String,value:String):*
 		{
 			return TypeHelperUtil.getType( value, PROPERTY_TYPES[convertProp( id )] );
 		}
@@ -65,7 +65,7 @@ package com.flashartofwar.fcss.enum
 		 * @param prop
 		 * @return
 		 */
-		public static function convertProp(prop:String):String 
+		public static function convertProp(prop:String):String
 		{
 			return (PROPERTY_MAP[prop]) ? PROPERTY_MAP[prop] : prop;
 		}

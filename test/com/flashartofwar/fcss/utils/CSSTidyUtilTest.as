@@ -1,7 +1,7 @@
 package com.flashartofwar.fcss.utils
 {
 	import com.flashartofwar.fcss.utils.CSSTidyUtil;
-	
+
 	import flexunit.framework.Assert;
 
 	public class CSSTidyUtilTest
@@ -10,12 +10,12 @@ package com.flashartofwar.fcss.utils
 
 		// Reference declaration for class to test
 		private var classToTestRef : com.flashartofwar.fcss.utils.CSSTidyUtil;
-		
+
 		public function CSSTidyUtilTest()
 		{
-			
+
 		}
-		
+
 		public function get cssText():String
 		{
 			var xml:XML = <css><![CDATA[/* This is a comment in the CSS file */
@@ -24,16 +24,16 @@ package com.flashartofwar.fcss.utils
 									height: 150 px;
 									margin: 0px;
 								}
-								
+
 								baseStyle .SimpleButton
 								{
-									border: 		#ff0000;	
+									border: 		#ff0000;
 								}
 							]]>
 				</css>;
 			return xml.toString();
 		}
-		
+
 		[Test]
 		public function testTidy():void
 		{

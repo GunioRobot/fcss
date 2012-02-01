@@ -91,7 +91,7 @@ package com.flashartofwar.fcss.utils
 			//TODO there is a bug if text already exists it messes up the StyleSheet
 
 //			var text:String;
-//			
+//
 //			if (textField.htmlText)
 //			{
 //				text = textField.htmlText;

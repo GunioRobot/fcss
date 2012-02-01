@@ -2,7 +2,7 @@ package com.flashartofwar.fcss.stylesheets
 {
 	import com.flashartofwar.fcss.styles.Style;
 	import com.flashartofwar.fcss.utils.CSSTidyUtil;
-	
+
 	import flexunit.framework.Assert;
 
 	public class StyleSheetCollectionTest
@@ -34,31 +34,31 @@ package com.flashartofwar.fcss.stylesheets
 										padding: 5px;
 										margin: 10px;
 								}
-								
+
 								baseStyle .Button{
 										x: 0px;
 										y: 0px;
 										background-color: #000000;
 								}
-								
+
 								#playButton {
 										background-color: #FFFFFF;
 										background-image: url('/images/full_screen_background.jpg');
 								}
-								
+
 								#fullScreenButton{
 										background-color: #FF0000;
 										background-image: url('/images/full_screen_background.jpg');
 								}
-								
+
 								#playButton:over {
 										background-color: #333333;
 								}
-								
+
 								interactive {
 										cursor: hand;
 								}
-								
+
 								baseStyle interactive .SimpleButton
 								{
 									width: 100;
@@ -79,7 +79,7 @@ package com.flashartofwar.fcss.stylesheets
 									height: 150px;
 									margin: 0px;
 								}
-								
+
 								extraStyle
 								{
 									debug: true;
@@ -101,7 +101,7 @@ package com.flashartofwar.fcss.stylesheets
 			styleSheetB.parseCSS(cssTextB);
 
 		}
-		
+
 		[Test]
 		public function testAddStyleSheet():void
 		{
@@ -109,26 +109,26 @@ package com.flashartofwar.fcss.stylesheets
 
 			Assert.assertNotNull(createdSheet);
 		}
-		
+
 		[Test]
 		public function testClear():void
 		{
 			styleSheetCollection.clear();
 			Assert.assertEquals(styleSheetCollection.totalStyleSheets, 0);
 		}
-		
+
 		protected function addBothStyleSheets():void
 		{
 			styleSheetCollection.addStyleSheet("sheetA", styleSheetA);
-			styleSheetCollection.addStyleSheet("sheetB", styleSheetB);	
+			styleSheetCollection.addStyleSheet("sheetB", styleSheetB);
 		}
-		
+
 		[Test]
 		public function testGetStyle():void
 		{
 			addBothStyleSheets();
 		}
-		
+
 		[Test]
 		public function testStyleToStringFromSheet():void
 		{
@@ -138,7 +138,7 @@ package com.flashartofwar.fcss.stylesheets
 			var output:String = "baseStyle{styleName:baseStyle;x:300;y:10;width:100;height:150;padding:5;margin:0;}";
 			Assert.assertEquals(style.toString(), output);
 		}
-		
+
 		[Test]
 		public function testDynamicStyleToString():void
 		{
@@ -151,7 +151,7 @@ package com.flashartofwar.fcss.stylesheets
 			var output:String = "propTest{styleName:propTest;propA:a;propB:b;propC:c;}";
 			Assert.assertEquals(style.toString(), output);
 		}
-		
+
 		[Test]
 		public function testGetStyleStyleName():void
 		{
@@ -160,7 +160,7 @@ package com.flashartofwar.fcss.stylesheets
 			var style:Style = styleSheetCollection.getStyle("baseStyle");
 			Assert.assertEquals(style.styleName, "baseStyle");
 		}
-		
+
 		[Test]
 		public function testGetStylePropTestA():void
 		{
@@ -169,7 +169,7 @@ package com.flashartofwar.fcss.stylesheets
 			var style:Style = styleSheetCollection.getStyle("baseStyle");
 			Assert.assertEquals(style.y, "10");
 		}
-		
+
 		[Test]
 		public function testGetStylePropTestB():void
 		{
@@ -178,7 +178,7 @@ package com.flashartofwar.fcss.stylesheets
 			var style:Style = styleSheetCollection.getStyle("baseStyle");
 			Assert.assertEquals(style.width, "100");
 		}
-		
+
 		[Test]
 		public function testGetStylePropTestC():void
 		{
@@ -187,7 +187,7 @@ package com.flashartofwar.fcss.stylesheets
 			var style:Style = styleSheetCollection.getStyle("baseStyle");
 			Assert.assertEquals(style.padding, "5");
 		}
-		
+
 		[Test]
 		public function testGetStylePropTestD():void
 		{
@@ -196,7 +196,7 @@ package com.flashartofwar.fcss.stylesheets
 			var style:Style = styleSheetCollection.getStyle("baseStyle");
 			Assert.assertEquals(style.x, "300");
 		}
-		
+
 		[Test]
 		public function testGetStyleSheet():void
 		{
@@ -204,7 +204,7 @@ package com.flashartofwar.fcss.stylesheets
 
 			Assert.assertNotNull(styleSheetCollection.getStyleSheet("test"));
 		}
-		
+
 		[Test]
 		public function testGet_styleNames():void
 		{
@@ -213,7 +213,7 @@ package com.flashartofwar.fcss.stylesheets
 
 			Assert.assertEquals(styles.length, 8);
 		}
-		
+
 		[Test]
 		public function testNewstyle():void
 		{
@@ -225,7 +225,7 @@ package com.flashartofwar.fcss.stylesheets
 
 
 		}
-		
+
 		[Test]
 		public function testParseCSS():void
 		{
@@ -236,7 +236,7 @@ package com.flashartofwar.fcss.stylesheets
 
 			Assert.assertEquals(sheet.toString(), tidyCSS);
 		}
-		
+
 		[Test]
 		public function testRemoveStyleSheet():void
 		{
@@ -245,7 +245,7 @@ package com.flashartofwar.fcss.stylesheets
 
 			Assert.assertNull(styleSheetCollection.getStyleSheet("sheetB"));
 		}
-		
+
 		[Test]
 		public function testGetStyleNamesReturnsCleanArray():void
 		{
